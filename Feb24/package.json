@@ -1,0 +1,23 @@
+{
+  "name": "july2mapexample",
+  "version": "1.0.0",
+  "description": "A leaflet map example",
+  "main": "public/index.html",
+  "scripts": {
+    "start": "parcel public/index.html --no-hmr",
+    "test": "jest"
+  },
+  "keywords": [
+    "map",
+    "leaflet",
+    "open",
+    "street",
+    "map"
+  ],
+  "author": "Rich Hildred",
+  "license": "MIT",
+  "dependencies": {
+    "leaflet": "^1.5.1",
+    "parcel-bundler": "^1.12.3"
+  }
+}

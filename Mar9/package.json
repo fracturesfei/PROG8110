@@ -1,0 +1,15 @@
+{
+  "name": "mar9",
+  "version": "1.0.0",
+  "description": "\"todolist\"",
+  "main": "public/index.js",
+  "scripts": {
+    "start":"parcel public/index.html",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies":{
+    "parcel-bundler":"^1.12.4"
+  }
+}
