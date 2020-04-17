@@ -15,13 +15,29 @@ $$("#tab2").on("tab:show", () => {
         $$("#groceryList").html("");
         for(let n = 0; n < aKeys.length; n++){
             const sKey = aKeys[n];
-            let sCard = `
-            <div class="card">
-            <div class="card-content card-content-padding">${oItems[aKeys[n]].item} </div>
+            let sCard="";
+          if(oItems[aKeys[n]].purchased!=null){
+          sCard = ` <div class="card">
+            <div class="card-content card-content-padding"><strike>${oItems[aKeys[n]].item}</strike></div>
+            <div class="card-content card-content-padding"><strike>${oItems[aKeys[n]].price}</strike></div>
+            <img class="card-content card-content-padding" src=${oItems[aKeys[n]].picture}>
             <button class="button" name="deleteme" id="d${sKey}">I don't need this</button>
             <button class="button" name="finishme" id="f${sKey}">I bought this</button>
             </div>
-            `
+            `;
+          }
+            else{
+            sCard = `
+            <div class="card">
+            <div class="card-content card-content-padding">${oItems[aKeys[n]].item} </div>
+            <div class="card-content card-content-padding">${oItems[aKeys[n]].price} </div>
+            <img class="card-content card-content-padding" src=${oItems[aKeys[n]].picture}>
+            <button class="button" name="deleteme" id="d${sKey}">I don't need this</button>
+            <button class="button" name="finishme" id="f${sKey}">I bought this</button>
+            </div>
+            `;
+            }
+            
             $$("#groceryList").append(sCard);
         }
         createDeleteHandlers();
